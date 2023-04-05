@@ -1,0 +1,20 @@
+ sudo yum update -y
+
+->Download the Terraform package from the official website using the following command:
+
+   wget https://releases.hashicorp.com/terraform/1.4.2/terraform_1.4.2_linux_amd64.zip
+
+
+->Unzip the downloaded package by running the following command:
+ 
+   unzip terraform_1.4.2_linux_amd64.zip
+
+
+->Move the unzipped binary to the /usr/local/bin directory using the following command:
+
+sudo mv terraform /usr/local/bin/
+
+
+->Verify the installation by running the following command:
+
+terraform --version

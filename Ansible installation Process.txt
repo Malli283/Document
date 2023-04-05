@@ -1,0 +1,59 @@
+Sudo yum update
+
+sudo amazon-linux-extras install ansible2 -y
+
+yum install git python python-pip pyhton-level openssl -y
+
+vi /etc/ansible/hosts
+
+vi /etc/ansible/ansible.cfg
+
+useradd ansible
+passwd ansible
+
+visudo
+
+vim /etc/ssh/sshd_config
+
+systemctl restart sshd
+
+systemctl status sshd
+
+Su -ansible
+
+ssh-keygen
+
+ssh-copy-id ansible@public ip of node
+hostname -i
+
+
+
+Adhoc-Commands:
+  
+
+ansible dev -a "ls"
+
+ansible dev -a "sudo yum install maven -y"
+
+ansible dev -ba "yum install maven -y"
+
+
+mvn −version.
+
+
+
+
+Maven Modules:
+
+Ansible ships with number of modules that can be executed directly  to remote hosts or playbooks
+
+ansible  dev -b -m yum -a "pkg=httpd state=present"(install:present)
+
+ansible  dev -b m yum -a "pkg=httpd state=latest"(update:latest)
+
+ansible  dev -b m yum -a "pkg=httpd state=absent"(uninstall:absent)
+
+
+
+
+
